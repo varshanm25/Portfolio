@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML PAGE</title>
+</head>
+
+<body style="background-color: pink;">
+    <!DOCTYPE html>  
+    <html>  
+    <head>  
+      <title>Web Storage API</title>  
+      <style>  
+         body{  
+          font-size: 40px;  
+          font-weight:500;  
+          color:white;
+          background-color:teal;
+          Font-family:sans,cursive;
+          height:100vh;
+          display:flex;
+          align-items:center;
+          flex-direction:column;
+          }  
+    button{
+    background-color:white;
+    padding:10px;
+    border:none;
+    margin:35px;}
+      </style>  
+    </head>  
+    <body>  
+    <div id="output"></div>  
+    <script>  
+     if(typeof(Storage)!=="undefined") {  
+      localStorage.setItem("name","tutorials");  
+      localStorage.setItem("category", "Local Storage");  
+      document.getElementById('output').innerHTML= "Hello welcome to"+ " "+ localStorage.name +" "+" learning about"+" "+localStorage.category;  
+       }  
+      else{  
+      alert("Sorry! your browser is not supporting the browser")  
+     }  
+    </script>  
+    <script>
+    if(sessionStorage) {
+        sessionStorage.setItem("greet", "Welcome");
+        sessionStorage.setItem("sub", "Html");
+        alert("Hi, " + sessionStorage.getItem("greet") + " " + "to " + sessionStorage.getItem("sub")+ " Tutorial");
+    } else {
+        alert("Sorry, your browser do not support session storage.");
+    }
+    </script>
+
+    </body>  
+    </html>  
+
+</html>
